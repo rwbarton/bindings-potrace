@@ -16,8 +16,11 @@ Author:              Reid Barton
 Maintainer:          rwbarton@gmail.com
 Category:            Graphics
 Build-type:          Simple
-Cabal-version:       >=1.2
+Cabal-version:       >=1.6
 
+Source-repository head
+  Type:     git
+  Location: git://github.com/rwbarton/bindings-potrace.git
 
 Library
   Exposed-modules:     Bindings.Potrace
