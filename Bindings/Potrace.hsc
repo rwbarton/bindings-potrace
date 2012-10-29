@@ -1,6 +1,8 @@
 #include <bindings.dsl.h>
 #include <potracelib.h>
 
+-- | See the Potrace API documentation at <http://potrace.sourceforge.net/potracelib.pdf>.
+
 module Bindings.Potrace where
 #strict_import
 
