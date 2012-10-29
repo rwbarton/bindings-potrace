@@ -62,7 +62,12 @@ module Bindings.Potrace where
 #field n , CInt
 #field tag , Ptr CInt
 #field c , Ptr <potrace_dpoint_t>
--- | NB: `c` is actually a pointer to array 3 of `potrace_dpoint_t`!  To access C's `c[n][i]` use instead offset `3 * n + i`.
+-- | NB: @c@ is actually declared as
+--
+--   > potrace_dpoint_t (*c)[3]
+--
+--   To access what would be @c[n][i]@ in C,
+--   use instead @peekElemOff c (3 * n + i)@.
 #stoptype
 #synonym_t potrace_curve_t , <struct potrace_curve_s>
 
